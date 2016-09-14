@@ -1,51 +1,65 @@
-# Copyright (C) 2015 The Pure Nexus Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# Auto-generated file, do not edit
 
 $(call inherit-product, vendor/huawei/angler/angler-vendor-blobs.mk)
 
-# Prebuilt APKs
+# Prebuilt APKs/JARs from 'vendor/app'
+PRODUCT_PACKAGES += \
+    TimeService \
+    ims
+
+# Prebuilt APKs libs symlinks from 'vendor/app'
+PRODUCT_PACKAGES += \
+    libimscamera_jni_64.so \
+    libimsmedia_jni_64.so
+
+# Prebuilt APKs/JARs from 'proprietary/app'
 PRODUCT_PACKAGES += \
     HwMMITest \
+    Tycho \
     HwSarControlService \
-    ims \
-    SetupSmartDeviceOverlay \
-    TimeService \
-    Tycho
+    SetupSmartDeviceOverlay
 
-# Prebuilt jars
+# Prebuilt APKs libs symlinks from 'proprietary/app'
+PRODUCT_PACKAGES += \
+    libManufacture_64.so
+
+# Prebuilt APKs/JARs from 'proprietary/framework'
 PRODUCT_PACKAGES += \
     qcrilhook \
-    com.google.widevine.software.drm
+    com.google.widevine.software.drm \
+    com.google.android.camera.experimental2015
 
-# Prebuilt privileged APKs
+# Prebuilt APKs/JARs from 'proprietary/priv-app'
 PRODUCT_PACKAGES += \
-    CallStatistics \
-    CarrierEntitlement \
-    CNEService \
-    DCMO \
-    DiagMon \
-    DMService \
-    GCS \
-    HiddenMenu \
     HotwordEnrollment \
+    Entitlement \
+    DCMO \
+    SprintDM \
+    CNEService \
+    ConnMO \
+    DMService \
+    CallStatistics \
+    DiagMon \
     qcrilmsgtunnel \
-    SprintDM
+    CarrierEntitlement \
+    HiddenMenu \
+    ConfigUpdater
 
-# Symlinks
+# Prebuilt APKs libs symlinks from 'proprietary/priv-app'
 PRODUCT_PACKAGES += \
-    libdmengine.so \
-    libdmjavaplugin.so \
-    libimscamera_jni \
-    libimsmedia_jni \
-    libManufacture.so
+    libdmengine_32.so \
+    libdmjavaplugin_32.so
+
+# Standalone symbolic links
+PRODUCT_PACKAGES += \
+    lowi.conf
+
+# Prebuilt shared libraries from 'vendor'
+PRODUCT_PACKAGES += \
+    libqmi_common_so \
+    libloc_ds_api \
+    libqmi_csi \
+    libdsi_netctrl \
+    libqmiservices \
+    libloc_api_v02 \
+    libqmi_cci
